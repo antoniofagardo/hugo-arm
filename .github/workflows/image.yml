@@ -21,11 +21,11 @@ jobs:
         run: |
           docker buildx build --push \
             --file Dockerfile-arm \
-            --tags gossetant/hugo-arm:latest \
+            --tag gossetant/hugo-arm:latest \
             --platform linux/arm .
       - name: build the arm image
         run: |
           docker buildx build --push \
             --file Dockerfile-arm64 \
-            --tags gossetant/hugo-arm:latest \
+            --tag gossetant/hugo-arm:latest \
             --platform linux/arm .
