@@ -8,8 +8,9 @@ RUN echo "$(uname -m)" \
     && if [[ "$(uname -m)" == "aarch64" ]]; then CONTAINER_ARCH="64"; else CONTAINER_ARCH=""; fi \
     && echo "CONTAINER_ARCH=ARM$CONTAINER_ARCH" \
     && wget -c https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-ARM${CONTAINER_ARCH}.tar.gz -O - | tar -xz -C /tmp \
-    && mkdir -p /usr/local/sbin \
-    && mv /tmp/hugo /usr/local/sbin/hugo \
+    && mkdir -p /usr/local/bin \
+    && mv /tmp/hugo /usr/local/bin/hugo \
+    && echo "$PATH" \
     && hugo version
 
-CMD ["echo", "Hello from Hugo on ARM $(uname -m)"]
+CMD ["hugo", "version"]
