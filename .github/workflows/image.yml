@@ -16,7 +16,7 @@ jobs:
         with:
           version: latest
       - name: login to docker hub
-        run: echo "${{ secret.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USER }}" --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USER }}" --password-stdin
       - name: build the arm image
         run: |
           docker buildx build --push \
