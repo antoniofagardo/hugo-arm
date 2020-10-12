@@ -8,6 +8,6 @@ Hugo docker container for ARM and ARM64
 
 ### Github Actions Build
 
-![Github Workflow Status](https://img.shields.io/workflow/status/gossetant/hugo-arm/Build)
+![Github Workflow Status](https://img.shields.io/github/workflow/status/antoniofagardo/hugo-arm/Build)
 
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/gossetant/hugo-arm/latest)
