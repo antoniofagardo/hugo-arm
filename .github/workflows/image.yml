@@ -20,12 +20,6 @@ jobs:
       - name: build the arm image
         run: |
           docker buildx build --push \
-            --file Dockerfile-arm \
+            --file Dockerfile \
             --tag gossetant/hugo-arm:latest \
-            --platform linux/arm/v7 .
-      - name: build the arm64 image
-        run: |
-          docker buildx build --push \
-            --file Dockerfile-arm64 \
-            --tag gossetant/hugo-arm:latest \
-            --platform linux/arm64 .
+            --platform linux/arm/v7,linux/arm64 .
