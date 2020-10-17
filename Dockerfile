@@ -2,7 +2,7 @@
 ARG ALPINE_VARIANT=3.12
 
 FROM alpine:${ALPINE_VARIANT}
-ARG HUGO_VERSION=0.76.4
+ARG HUGO_VERSION=0.76.5
 
 RUN echo "$(uname -m)" \
     && if [[ "$(uname -m)" == "aarch64" ]]; then CONTAINER_ARCH="64"; else CONTAINER_ARCH=""; fi \
